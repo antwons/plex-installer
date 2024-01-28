@@ -1,4 +1,4 @@
-<img src="https://github.com/antwons/plex-installer/blob/V0.1/branding/design-de18c445-f454-49b1-b383-fa7684c38d83.png?raw=true"> 
+<img src="[https://github.com/antwons/plex-installer/blob/V0.1/branding/design-de18c445-f454-49b1-b383-fa7684c38d83.png?raw=true](https://github.com/antwons/plex-installer/blob/main/branding/design-de18c445-f454-49b1-b383-fa7684c38d83%20(1).png?raw=true)"> 
 
 ### To start using our installer, please copy the following code
 > Ubuntu, Debain & Centos installer
