@@ -8,7 +8,7 @@ read -p "Would you like to install Docker & Docker Compose? (y/n): " install_doc
         echo "We are going to now install Docker and Docker-Compose"
         sleep 2
         read -p "But first we need to know, are you running Fedora? (y/n)" fedora
-            if [[ "$fedora" == "y" || "$fedora" == "Y" ]]: then
+            if [[ "$fedora" == "y" || "$fedora" == "Y" ]]; then
                 echo "Okay, we are running the Docker install for Fedora"
                 sleep 2
                 yum install sudo && sudo yum install git -y && sudo git clone https://github.com/antwons/Docker-Install.git && cd Docker-Install/scripts && bash menu.sh
