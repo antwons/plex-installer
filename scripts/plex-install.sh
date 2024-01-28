@@ -35,7 +35,7 @@ read -p "Would you like to install Docker & Docker Compose? (y/n): " install_doc
     fi
 
 clear
-sleep 4
+sleep 3
 echo "Now we are going to install Plex!"
 
 #Part 2: Plex Install 
@@ -86,7 +86,7 @@ services:
 docker compose -f plex_docker-compose.yml up -d
 
 clear
-sleep 2
+sleep 3
 echo "Now we are going to install Prowlarr"
 sleep 2
 clear
@@ -117,7 +117,7 @@ services:
 docker compose -f prowlarr_docker-compose.yml up -d
 
 clear
-sleep 2
+sleep 3
 echo "Now we are going to install Radarr & Sonarr" 
 sleep 2
 
@@ -175,7 +175,7 @@ services:
 docker compose -f sonarr_docker-compose.yml up -d
 
 clear
-sleep 2
+sleep 3
 echo "Now we are going to install QBITTORRENT"
 sleep 2
 
@@ -207,9 +207,9 @@ services:
 docker compose -f qbit_docker-compose.yml up -d
 
 echo "The username to login to QBITTORRENT is admin and password is found in the logs of Qbit"
-sleep 4
+sleep 3
 clear
-sleep 2
+sleep 3
 echo "Now we are going to install Ombi"
 sleep 2
 
@@ -237,7 +237,7 @@ services:
 docker compose -f ombi_docker-compose.yml up -d 
 
 clear
-sleep 2
+sleep 3
 read -p "Would you like to install Unpackerr? Please note that after this installer, there is some configuration that you'll need to do for unpackerr. (y/n)" unpackerrinstall
     if [[ "$unpackerrinstall" == "y" || "$unpackerrinstall" == "Y" ]]; then
         clear
