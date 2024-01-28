@@ -1,5 +1,13 @@
 #!/bin/bash
+sleep 2
+clear
 
+echo "Hello, and welcome to our Plex All-In-One installer."
+sleep 2
+echo
+echo "In this installer, we are going to Install Docker, then go into installing Plex, Prowlarr, Radarr, Sonarr, Qbittorrent and OMbi!"
+sleep 2
+clear
 #Part 1: Docker Install 
 
 read -p "Would you like to install Docker & Docker Compose? (y/n): " install_docker
@@ -12,10 +20,14 @@ read -p "Would you like to install Docker & Docker Compose? (y/n): " install_doc
                 echo "Okay, we are running the Docker install for Fedora"
                 sleep 2
                 yum install sudo && sudo yum install git -y && sudo git clone https://github.com/antwons/Docker-Install.git && cd Docker-Install/scripts && bash menu.sh
+                sleep 4
+                clear
             else
                 echo "Okay, we are running the our basic Docker-Install"
                 sleep 2
                 apt install sudo && sudo apt install git -y && sudo git clone https://github.com/antwons/Docker-Install.git && cd Docker-Install/scripts && bash menu.sh
+                sleep 4
+                clear
             fi
     else
         echo "Okay, you've opt'd away from installing Docker. Please note that this install can only use Docker to install our Plex Stack"
@@ -23,12 +35,12 @@ read -p "Would you like to install Docker & Docker Compose? (y/n): " install_doc
     fi
 
 clear
-sleep 2
+sleep 4
 echo "Now we are going to install Plex!"
 
 #Part 2: Plex Install 
 clear
-sleep 1
+sleep 2
 
 cd /home
 mkdir plex
@@ -107,6 +119,7 @@ docker compose -f prowlarr_docker-compose.yml up -d
 clear
 sleep 2
 echo "Now we are going to install Radarr & Sonarr" 
+sleep 2
 
 #Part 4a: Radar Install 
 cd /home
@@ -164,6 +177,7 @@ docker compose -f sonarr_docker-compose.yml up -d
 clear
 sleep 2
 echo "Now we are going to install QBITTORRENT"
+sleep 2
 
 #part 5: Qbittorrent install 
 cd /home
@@ -197,6 +211,7 @@ sleep 4
 clear
 sleep 2
 echo "Now we are going to install Ombi"
+sleep 2
 
 #Part 6: Ombi install 
 cd /home
@@ -286,5 +301,29 @@ read -p "Would you like to install Unpackerr? Please note that after this instal
     fi
 clear
 sleep 2
+
+#ip
+echo "Now we just need to get your IP address for you!"
+sleep 2
+clear
+
+local_ip=$(hostname -I | awk '{print $1}')
+
+# Check if the IP address is not empty
+if [ -n "$local_ip" ]; then
+  echo "Your IP address is: $local_ip"
+else
+  echo "Unable to determine IP address. Please make sure that your ethernet cable is plugged in"
+fi
+
+echo
+sleep 3
+echo "Awesome! Looks like everything is installed."
+echo 
+echo "If you installed Portainer-CE, head over to https://$local_ip:9443"
+echo
+echo "If you installed Portainer-Agent, make sure to login to your Main portainer instance and add it as an environment."
+echo 
+echo "Thank you for supporting our project! - Antwons!"
 
 #end of script 
