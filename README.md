@@ -3,11 +3,11 @@
 ### To start using our installer, please copy the following code
 > Ubuntu, Debain & Centos installer
 ```
-sudo apt install -y git && git clone https://https://github.com/antwons/plex-installer.git && cd plex-installer && cd scripts && bash plex-install.sh
+sudo apt install -y git && git clone https://github.com/antwons/plex-installer.git && cd plex-installer && cd scripts && bash plex-install.sh
 ```
 > Fedora Installer
 ```
-yum install -y git && git clone https://https://github.com/antwons/plex-installer.git && cd plex-installer && cd scripts && bash plex-install.sh
+yum install -y git && git clone https://github.com/antwons/plex-installer.git && cd plex-installer && cd scripts && bash plex-install.sh
 ```
 ### FAQ's 
 
