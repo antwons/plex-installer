@@ -14,7 +14,7 @@ yum install -y git && git clone https://https://github.com/antwons/plex-installe
 #### *What does this script do exactly?*
 > This script will install Docker and Docker compose to begin with. Once installed, we will move forward with installing Plex, Radarr, Sonarr, Qbittorrent & Ombi. Then we will ask if you want to install Unpackerr.
 > 
-> During the Docker and Docker compose install, you will be prompted to also install Portainer or Portainer-Agent. Once Portainer is installed or you've opted out of it, it will then grab you IP address and sever you with your machines current IP address along with the URL to go to if you did download Portainer.
+> During the Docker and Docker compose install, you will be prompted to also install Portainer or Portainer-Agent. 
 > 
 >During the Plex install, you will need to go to https://www.plex.tv/claim/ in-order to get the claim token needed for your Plex Server to start. Then the rest of the install goes very smoothly with little to no interactions.
 >
